@@ -1,0 +1,75 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <div class="logo-img">
+                    <i class="fas fa-music"></i>
+                </div>
+                <logo class="title">
+                    Music
+                </logo>
+            </div>
+
+            <div class="image">
+                <img src="./asset/img/anh.jfif" alt="">
+            </div>
+
+            <div class="volumn-control">
+                <span id="volumn-show">90</span>
+                <div class="speaker"><i class="fas fa-volume-up"></i></div>
+                <input type="range" min="0" max="100" value="90" id="volumn">
+            </div>
+
+        </div>
+
+
+        <div class="right">
+            <div class="show-song-no">
+                <p class="present-song">1</p>
+                <p>/</p>
+                <p class="total-song">5</p>
+            </div>
+
+            <h2 class="title-song">
+                Bai Hat
+            </h2>
+
+            <p class="singer">
+                Son Tung
+            </p>
+
+            <div class="song-controls">
+                <button class="pre"><i class="fas fa-step-backward"></i></button>
+                <button onclick="justPlay()" id="play"><i class="fas fa-play"></i></button>
+                <button class="next"><i class="fas fa-step-forward"></i></button>
+            </div>
+
+            <!-- <div class="autoplay">Auto play</div> -->
+
+            <div class="duration">
+                <input type="range" class="progress" min="0" max="100" step="1" value="0">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
